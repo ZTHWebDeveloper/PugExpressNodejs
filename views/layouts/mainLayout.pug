@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{pageTitle}
+        link(rel="stylesheet", href="css/style.css")
+        block style
+    body
+        header
+            nav
+                div.container
+                    ul
+                        li
+                            a(href="/" ,class=(path ==='/'? 'active': '')) Show
+                        li
+                            a(href="add-product",class=(path === '/add-product' ? 'active': '')) Add Product
+                        li.margin
+                            a(href="login") Login
+                        li 
+                            a(href="course") Course
+                        li 
+                            a(href="topic") Topic
+
+                        
+                        
+        block content

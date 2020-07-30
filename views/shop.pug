@@ -1,0 +1,21 @@
+extends layouts/mainLayout
+block style 
+    link(rel="stylesheet", href="/css/flex.css") 
+block content 
+    main
+        div.container 
+            div.parentGrid  
+                if(prods.length > 0)
+                    each product in prods
+                        div.card 
+                            div.card-title 
+                                h3 #{product.title} 
+                            div.card-body
+                                img(src="img/about-2.jpg", alt="") 
+                            div.card-footer
+                                h3 $ #{product.price}
+                                
+                                a(href="/update/"+product._id) update
+                else
+                    h1 No Product
+                

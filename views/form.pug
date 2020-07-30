@@ -1,0 +1,14 @@
+extends layouts/mainLayout
+block content
+    section
+        div.center
+            form(action="add-product" method="post")
+                h3 Add Products
+                div
+                    label(for="title") Title
+                    input(type="text" name='title' placeholder="Title" class="input1" required="")
+                div
+                    label(for="price") Price
+                    input(type="number" name='price' placeholder="price" class="input1" required="")
+                input(type="submit" value="Add Product" class="submit") 
+            

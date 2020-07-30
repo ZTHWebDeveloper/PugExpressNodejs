@@ -1,0 +1,14 @@
+extends ../layouts/mainLayout
+block content
+    section
+        div.center
+            form(action="course" method="post")
+                h3 Course
+                div
+                    label(for="title") Name
+                    input(type="text" name='name' placeholder="Name" class="input1" required="")
+                div
+                    label(for="content") Content
+                    input(type="text" name='content' placeholder="Content" class="input1" required="")
+                input(type="submit" value="Add Course" class="submit") 
+            

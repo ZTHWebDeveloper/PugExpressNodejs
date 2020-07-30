@@ -1,0 +1,19 @@
+extends ../layouts/mainLayout
+block content
+    section
+        div.center
+            form(action="topic" method="post")
+                h3 Topic
+                h2 #{message}
+                div
+                    label(for="title") Name
+                    input(type="text" name='title' placeholder="" class="input1" required="")
+                div
+                    label(for="content") Body
+                    input(type="text" name='body' placeholder="" class="input1" required="")
+                div 
+                    label(for="courseId") courseId
+                    select(name="") 
+                        each course  in courseData 
+                            option(value=course._id) #{course.name}
+                input(type="submit" value="Add Topic" class="submit") 
